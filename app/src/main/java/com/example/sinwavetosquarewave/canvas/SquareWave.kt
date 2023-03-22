@@ -16,9 +16,11 @@ fun SquareWave(
     n: Int,
     frequency: Float
 ) {
-    Canvas(modifier = Modifier
-        .fillMaxWidth()
-        .height(200.dp)) {
+    Canvas(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(200.dp)
+    ) {
         val canvasWidth = size.width
         val canvasHeight = size.height
         val amplitude = canvasHeight / 2f

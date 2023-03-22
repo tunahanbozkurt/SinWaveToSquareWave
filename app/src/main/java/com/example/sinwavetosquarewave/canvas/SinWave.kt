@@ -15,9 +15,11 @@ import kotlin.math.sin
 fun SinWave(
     frequencyFactor: Float
 ) {
-    Canvas(modifier = Modifier
-        .fillMaxWidth()
-        .height(200.dp)) {
+    Canvas(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(200.dp)
+    ) {
         val canvasWidth = size.width
         val canvasHeight = size.height
         val frequency = 2f * frequencyFactor
@@ -30,7 +32,8 @@ fun SinWave(
         path.moveTo(0f, startY)
 
         for (x in 0..canvasWidth.toInt()) {
-            val y = ((amplitude * sin(angularFrequency * x / canvasWidth.toDouble())).toFloat()) / frequencyFactor
+            val y =
+                ((amplitude * sin(angularFrequency * x / canvasWidth.toDouble())).toFloat()) / frequencyFactor
             path.lineTo(x.toFloat(), startY + y)
         }
 
