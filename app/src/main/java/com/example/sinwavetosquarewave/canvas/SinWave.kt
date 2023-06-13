@@ -18,7 +18,7 @@ fun SinWave(
     Canvas(
         modifier = Modifier
             .fillMaxWidth()
-            .height(200.dp)
+            .height(150.dp)
     ) {
         val canvasWidth = size.width
         val canvasHeight = size.height

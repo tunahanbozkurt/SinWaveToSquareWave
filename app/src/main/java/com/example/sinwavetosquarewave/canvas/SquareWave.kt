@@ -31,7 +31,7 @@ fun SquareWave(
         val path = Path()
         path.moveTo(0f, startY)
 
-        val repeatCount = if (n == 0) 1 else n
+        val repeatCount = if (n == 0) 1 else if (n == 1) 2 else n
         for (x in 0..canvasWidth.toInt()) {
             var result = 0f
             var frequencyFactor = 1f

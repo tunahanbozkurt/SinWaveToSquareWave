@@ -11,7 +11,7 @@ class MainViewModel : ViewModel() {
     private val _frequencyState: MutableStateFlow<Float> = MutableStateFlow(0f)
     val frequencyState: StateFlow<Float> = _frequencyState.asStateFlow()
 
-    private val _harmonicsState: MutableStateFlow<Int> = MutableStateFlow(1)
+    private val _harmonicsState: MutableStateFlow<Int> = MutableStateFlow(0)
     val harmonicsState: StateFlow<Int> = _harmonicsState.asStateFlow()
 
     fun setFrequency(frequency: Float) {
@@ -20,7 +20,7 @@ class MainViewModel : ViewModel() {
 
     fun setHarmonic(n: Float) {
         _harmonicsState.update {
-            if (n.toInt() % 2 == 1) n.toInt() else it
+            if (n.toInt() % 2 == 1 || n.toInt() == 0) n.toInt() else it
         }
     }
 }
